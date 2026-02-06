@@ -11,7 +11,8 @@ st.title("Analyse des émissions de CO2 par pays")
 # Charger le DataFrame (caché pour performance)
 @st.cache_data
 def load_df():
-    return pd.read_csv('../student-challenges/curriculum/03-Data-Analysis/05-Dashboards-with-Plotly-Dash-Streamlit/01-Challenges/01-Plotly-CO2-emissions/data/CO2_per_capita_cleaned.csv')
+    return pd.read_csv('CO2_per_capita_cleaned.csv')
+    #return pd.read_csv('../student-challenges/curriculum/03-Data-Analysis/05-Dashboards-with-Plotly-Dash-Streamlit/01-Challenges/01-Plotly-CO2-emissions/data/CO2_per_capita_cleaned.csv')
 
 df = load_df()
 st.success(f"DataFrame chargé : {df.shape[0]:,} lignes, {df.shape[1]} colonnes")
